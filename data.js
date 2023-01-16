@@ -350,4 +350,47 @@ const data = [
     Currency: "Tugrik",
   },
 ];
-module.exports = { data };
+const ids = [
+  {
+    id: 1,
+    name: "Savina Vernall",
+  },
+  {
+    id: 2,
+    name: "Yoshi Cownden",
+  },
+  {
+    id: 3,
+    name: "Matilda Barrim",
+  },
+  {
+    id: 4,
+    name: "Joy Tidman",
+  },
+  {
+    id: 5,
+    name: "Willie Wheaton",
+  },
+  {
+    id: 6,
+    name: "Elihu Blumire",
+  },
+  {
+    id: 7,
+    name: "Jennette Quartermain",
+  },
+  {
+    id: 8,
+    name: "Marleen Brogden",
+  },
+  {
+    id: 9,
+    name: "Jasmin Ollington",
+  },
+  {
+    id: 10,
+    name: "Koralle McGilvary",
+  },
+];
+
+module.exports = { data,ids};

@@ -1,21 +1,24 @@
+const { urlencoded } = require("express");
 const express = require("express");
-const {data}= require("./data.js");
 const app = express();
-// app.use(express.static('./Web'))
-app.get("/", (req, res) => {
-  res.status(200).send('<h1>Welcome to HomePage...</h1>');
+const { ids } = require("./data.js");
+app.use(express.static('./Web'))
+app.use(urlencoded({extended:false}))
+app.get("/",(req, res) => {
+  res.status(200).send("<h1>Welcome to HomePage...</h1>");
 });
-app.get("/about/query", (req, res) => {
-  const { name } = req.query;
-  let newdata=[...data]
-  newdata = data.filter((item) => {
-    return item.first_name.startsWith(name)
-  })
-  res.status(200).json(newdata)
+app.post("/login", (req, res) => {
+  const { Name, Password } = req.body
+  if (Name) {
+    res.status(200).send(`Welcome ${Name} Your Credentials are : ${Password}`)
+  } else {
+    res.status(401).send("Please Provide name And Credentials")
+  }
 });
-app.all("*", (req, res) => {
-  res.status(404).send("<h3> Resource Not Foud Buddy....</h3>");
-});
+
+
+
+
 app.listen(3300, () => {
   console.log("app is listening....");
 });
