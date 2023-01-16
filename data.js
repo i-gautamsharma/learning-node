@@ -353,7 +353,7 @@ const data = [
 const ids = [
   {
     id: 1,
-    name: "Savina Vernall",
+    name: "Savina",
   },
   {
     id: 2,
@@ -361,7 +361,7 @@ const ids = [
   },
   {
     id: 3,
-    name: "Matilda Barrim",
+    name: "Matilda",
   },
   {
     id: 4,
@@ -389,7 +389,7 @@ const ids = [
   },
   {
     id: 10,
-    name: "Koralle McGilvary",
+    name: "Koralle",
   },
 ];
 
